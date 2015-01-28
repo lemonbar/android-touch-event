@@ -17,6 +17,18 @@ public class MyButton extends Button {
     }
 
     @Override
+    protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
+        Log.d(TAG, "onLayout");
+        super.onLayout(changed, left, top, right, bottom);
+    }
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        Log.d(TAG, "onMeasure");
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+    }
+
+    @Override
     //this method will execute setOnTouchListener.onTouch method, and onTouchEvent sequence.
     public boolean dispatchTouchEvent(MotionEvent event) {
         int action = event.getAction();

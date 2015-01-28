@@ -7,7 +7,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 
-public class MyActivity extends Activity {
+public class MyTouchEventActivity extends Activity {
     Button myButton;
     protected static final String TAG = "MyButton";
 
@@ -17,7 +17,7 @@ public class MyActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.activity_touch_event);
 
         myButton = (Button) findViewById(R.id.btn);
 
